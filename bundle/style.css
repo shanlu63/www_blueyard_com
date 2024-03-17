@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: normal .8em amstelvarAlpha, Helvetica sans-serif;
+
+}
+html,body{
+    height:100%;
+    width: 100%;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #017777, 0 0 20px #b46fc5, 0 0 30px #a1d467; /* 萤火光芒效果 */
+    font-size: 80px;
+    position: relative;
+    letter-spacing: 20px;
+}
+header a {
+    color: #ffffff; /* 设置链接字体颜色为白色 */
+    text-decoration: none; /* 移除链接下划线 */
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    background-color: #8887877a;
+    padding: 30px 50px 30px 100px; /* 上下各30px，右侧100px，左侧0px */
+    text-align: right; /* 将文本右对齐 */
+    text-shadow: 0 0 10px #017777, 0 0 20px #b46fc5, 0 0 30px #a1d467; /* 萤火光芒效果 */
+    z-index: 1000; /* 设置一个较高的 z-index 值 */
+}
+nav a {
+    color: rgb(249, 251, 250);
+    text-decoration: none;
+    margin: 0 20px;
+    display: inline-block; /* 确保链接元素占据整个可用宽度 */
+    position: relative;
+    padding: 0 20px;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* 按钮垂直居中 */
+    left: 0;
+    transform: translateY(-50%); /* 上下居中 */
+    width: 100%; /* 按钮宽度与文字一样长 */
+    height: 25px; /* 按钮高度 */
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明的白色按钮 */
+    border-radius: 15px; /* 圆角为5px */
+    z-index: -1;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+    pointer-events: none; /* 使其不影响链接的点击 */
+}
+
+nav a:hover::before {
+    background-color: rgb(1, 100, 80); /* 鼠标悬停时，按钮变为白色 */
+}
